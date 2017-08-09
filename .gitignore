@@ -1,3 +1,6 @@
 flask/
 tmp/
+__pycache__/
 app/__pycache__/
+*.db
+db_repository/
