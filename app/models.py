@@ -8,3 +8,12 @@ class User(db.Model):
     
     def __repr__(self):
         return "<User %r>" % (self.nick)
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.String(140)) # #twitter
+    timestamp = db.Column(db.DateTime)
+    user_id = db.Column(db.Integer, db.ForeignKey("user_id"))
+    
+    def __repr__(self):
+        return "<Post %r>" % (self.body)
